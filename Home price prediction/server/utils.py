@@ -20,7 +20,7 @@ def get_estimated_price(location, sqft, bedroom, bath):
     if loc_index >= 0:
         x[loc_index] = 1
 
-    return __model.predict([x])[0]
+    return np.round(__model.predict([x])[0], 2)
 
 
 def get_location_names():
